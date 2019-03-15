@@ -1,0 +1,28 @@
+{% extends 'accounts/base.html' %}
+
+
+{% block content %}
+<div class="hero">
+  <div class="container">
+    <h3 class="display-2 text-center">TodoApplication</h3>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+
+
+     <div class="col-lg-9">
+
+     <center>
+   <a href="{% url 'accounts:login'  %}"> <button  class = "btn btn-danger " type="submit" name="login" style="font-size: 30px; margin-right: 115px;">Login</button></a>
+
+ <a href="{% url 'accounts:signup' %}"> <button  class = "btn btn-danger " type="submit" name="signup" style="font-size: 30px; margin-right: 20px;">Signup</button></a>
+
+</center>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends 'accounts/base.html' %}
+
+
+{% block content %}
+
+	<div class="hero">
+		<div class="container">
+
+
+			<br>
+			<br>
+			<div class="row">
+				<form id="form" class="col-lg-6 col-8 mx-auto" method="post">
+					<div class="input-group">
+						{% csrf_token %}
+						{{form.as_p}}
+
+						<span>
+							<button id="btn" type="submit" class="btn btn-primary " style="font-size: 20px;">Add</button>
+						</span>
+					</div>
+				</form>
+			</div>
+
+			<br>
+			<div class="row">
+
+
+			<table class="table table-stripped">
+				<thead>
+					<tr>
+					<th>List of Todo's</th>
+					<th>Update</th>
+					<th>Delete</th>
+					<th>Mark</th>
+				</tr>
+			</thead>
+			<tbody>
+					{% for l in list %}
+					<tr>
+  					<td><a href="{% url 'todolist:see' l.pk %}">{{l.content}}</a>
+  					<a href="{% url 'todolist:update' l.pk %}"> <button  class = "btn btn-primary " type="submit" name="update" >Update</button></a>
+</td>
+   <td><a href="{% url 'todolist:delete' l.pk %}"> <button  class = "btn btn-primary " type="submit" name="delete" >Delete</button></a>
+</td>
+<td>
+ 	{% if l.mark %}
+
+ 		<a href="{% url 'todolist:incomplete' l.pk %}"><button  class = "btn btn-primary " type="submit" name="mark" >Unmark</button></a>
+
+ 	{% else %}
+ 		<a href="{% url 'todolist:complete' l.pk %}"><button  class = "btn btn-primary " type="submit" name="mark" >Mark</button></a>
+ 	{% endif %}
+<td>
+</tr>
+
+
+{% endfor %}
+</tbody>
+</table>
+				<a href="{% url 'todolist:deletecompleted' %}"> <button type="submit" class = "btn btn-danger " name="deletecompleted" style="font-size: 18px;">Delete Marked</button></a>
+
+			</div>
+<br><br>
+<br>
+
+
+<br><br>
+				<div class="row">
+
+					<table class="table table-stripped">
+						<thead>
+							<tr>
+							<th>List of Marked Todo's</th>
+							<th>Update</th>
+							<th>Delete</th>
+							<th>Mark</th>
+						</tr>
+					</thead>
+					<tbody>
+							{% for l in todos %}
+							<tr>
+								<td><a href="{% url 'todolist:see' l.pk %}">{{l.content}}</a>
+								<a href="{% url 'todolist:update' l.pk %}"> <button  class = "btn btn-secondary " type="submit" name="update" >Update</button></a>
+					</td>
+					<td><a href="{% url 'todolist:delete' l.pk %}"> <button  class = "btn btn-secondary " type="submit" name="delete" >Delete</button></a>
+					</td>
+					<td>
+					{% if l.mark %}
+
+					<a href="{% url 'todolist:incomplete' l.pk %}"><button  class = "btn btn-secondary " type="submit" name="unmark" >Unmark</button></a>
+
+					{% else %}
+					<a href="{% url 'todolist:complete' l.pk %}"><button  class = "btn btn-secondary " type="submit" name="mark" >Mark</button></a>
+					{% endif %}
+					<td>
+					</tr>
+
+
+					{% endfor %}
+					</tbody>
+					</table>
+
+
+		</div>
+	</div>
+</div>
+{% endblock %}

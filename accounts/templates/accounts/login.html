@@ -1,0 +1,24 @@
+{% extends 'accounts/base.html' %}
+
+
+{% block content %}
+
+  <div class="hero">
+    <div class="container">
+
+ <div class="parallax-signup" data-parallax="scroll" data-z-index="1" data-image-src="/static/2.jpg">
+    <br><br><br>
+    <h1 class = "para-signup" align = "center">LOG IN</h1>
+    <form class="site-form-signup" action="{% url 'accounts:login'%}" method="post">
+      {%csrf_token%}
+      {{form}}
+      {% if request.GET.next %}
+        <input type="hidden"name="next"value="{{request.GET.next}}">
+      {% endif %}
+      <input type="submit"value="Login">
+    </form>
+  </div>
+  </div>
+</div>
+
+{% endblock %}

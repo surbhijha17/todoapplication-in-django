@@ -1,0 +1,37 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TodoList App</title>
+	<!-- bootstrap cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">	
+</head>
+
+
+  <body>
+  		
+  	<div class="hero">
+		<div class="container">
+			<h3 class="display-2 text-center">TodoList</h3>
+			<p class="lead text-center">Update Your Todo</p>
+			<div class="row">
+				<form id="form" class="col-lg-6 col-8 mx-auto" method="post">
+					<div class="input-group">
+						{% csrf_token %}
+						{{form.as_p}}
+						<span>
+							<button id="btn" type="submit" class="btn btn-primary " style="font-size: 20px;">Submit</button>
+						</span>
+					</div>			     
+				</form>
+			</div>	
+		</div>
+	</div>		
+</body>
+</html>

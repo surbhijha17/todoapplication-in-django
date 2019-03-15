@@ -1,0 +1,263 @@
+/*
+ todoList style
+*/
+
+/*variables*/
+:root {
+	--righteous-font: 'Righteous', cursive;
+}
+
+body {
+	 background-color: rgb(42, 52, 107);
+
+
+
+
+
+    color: white;
+    font-size: 1 rem;
+}
+span{
+	margin-top: 20px;
+	margin-left:212px;
+}
+span .btn{
+	width:100%;
+}
+p{
+	margin-left:50px;
+}
+input{
+	position: relative;
+	margin-left: 30px;
+
+}
+textarea{
+	margin-left: 113px;
+	margin-top:-90px;
+	margin-right: 150px;
+	position: relative
+}
+label{
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 10px;
+	margin-right: 30px;
+}
+.form-control{
+	margin-left: 41px;
+
+}
+.hero {
+	position: inline;
+
+    min-width: 100vw;
+    top: 0;
+    bottom: 0;
+
+}
+.table th{
+	margin-right: 20px;
+}
+.schedule{
+	position: absolute;
+
+    min-width: 100vw;
+    top: 0;
+    bottom: 0;
+
+}
+.btn{
+
+font-size:12px;
+float: right;
+
+}
+h1 {
+	margin-top: 4rem;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	font-family: var(--righteous-font);
+}
+
+h3 {
+	margin-top: 4rem;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	font-family: var(--righteous-font);
+}
+.btn-danger{
+	margin-right:180px;
+}
+
+.btn-secondary{
+	align-items: center;
+}
+
+.table th{
+	align-items: center;
+
+}
+.lead {
+	font-size: 1 rem;
+	font-family: var(--righteous-font);
+}
+ul {
+	/*border-top: 2px solid white;*/
+	margin-top: 0.5rem;
+	list-style: none;
+	/*display: none;*/
+}
+li {
+	border-bottom: 1px solid white;
+	padding: 0.5rem 0 0.5rem 0;
+	margin: 0 0.4rem 0 0.5rem;
+}
+.checkboxes {
+	float: right;
+	line-height: 15px;
+	width: 17px;
+	height: 17px;
+	background-color: #e9ecef;
+	border: 1px solid #e9ecef;
+	border-radius: 3px;
+}
+
+.para-signup, .parallax-info, .post-heading, .meta{
+  z-index:2;
+  position:relative;
+  color:white;
+
+}
+
+ .site-form {
+   z-index:2;
+   position:relative;
+   text-align: left;
+     padding: 4em 4em 2em;
+     max-width: 400px;
+     margin: 50px auto 0;
+     box-shadow: 0 0 1em #222;
+     border-radius: 2px;
+     background: #fff;
+
+}
+
+
+
+
+.site-form-signup{
+
+
+
+   position:relative;
+   text-align: left;
+    padding: 4em 4em 2em;
+     max-width: 550px;
+     height:100%;
+     margin: 50px auto 0;
+
+
+
+}
+
+.site-form-signup input {
+  width: 100%;
+  padding: 9px;
+
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.site-form-signup input[type="submit"]
+{
+	margin-top: 10px;
+  background: #00dba0;
+}
+
+
+
+ .site-form input{
+
+      width: 100%;
+  padding: 5px;
+
+  display: inline-block;
+  border: none;
+
+   }
+   .site-form textarea{
+     background: #fff;
+    border: 1px solid #dbdbdb;
+    font-size: 1.6em;
+    padding: .8em .5em;
+    border-radius: 2px;
+   }
+
+
+
+.comment input[type="submit"]{
+
+  background: #00dba0;
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-top: -25px;
+    margin-bottom: 10px
+   }
+
+ a.highlight{
+    border: 1px solid #00dba0;
+    padding: 10px;
+    border-radius: 4px;
+    color: #00dba0;
+}
+ .helptext, .helptext ul{
+    margin: 0 auto 20px;
+    color: white;
+    font-size:4px;
+    display: none;
+}
+ .errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #FF5722;
+    margin: 10px 0;
+
+    color: #FF5722
+}
+ .errorlist{
+    padding: 0;
+}
+ .site-form input[type="submit"]{
+    background: #00dba0;
+    border: 0;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 20px;
+    margin-top:  25px ;
+    margin-bottom: 0px;
+}
+
+
+.site-form-create input[type="submit"]{
+   background: #00dba0;
+   border: 2px;
+   color: #fff;
+   border-radius: 6px;
+   font-size: 20px;
+   margin-top: 20px ;
+   margin-right: 0px;
+
+}
+
+.site-form-create input{
+   width: 100%;
+  padding: 9px;
+
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}

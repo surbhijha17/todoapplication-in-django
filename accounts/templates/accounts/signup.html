@@ -1,0 +1,21 @@
+{% extends 'accounts/base.html' %}
+
+
+{% block content %}
+  <div class="hero">
+    <div class="container">
+
+    <div class="parallax-signup" data-parallax="scroll" data-z-index="1" data-image-src="/static/2.jpg">
+    <br>
+    <br>
+    <h1 class="para-signup" align = "center">SIGN UP</h1>
+    <form class="site-form-signup" action="" method="post">
+        {%csrf_token%}
+      {{form}}
+      <input type="submit"value="signup">
+    </form>
+  </div>
+</div>
+</div>
+
+  {% endblock %}
